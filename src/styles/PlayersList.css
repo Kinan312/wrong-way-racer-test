@@ -1,0 +1,20 @@
+.playersTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% !important;
+    width: 98%;
+    background: radial-gradient(101.35% 101.35% at 50% 22.11%, rgba(34, 21, 49, 0.5) 0%, rgba(22, 22, 48, 0.5) 71.87%), rgba(19, 20, 68, 0.5);
+}
+
+.settingsBtnContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 4% 0 0 0 !important;
+}
+
+.settingBtn {
+    width: 80%;
+    border: 2px solid black !important;
+}

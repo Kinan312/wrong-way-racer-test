@@ -1,0 +1,57 @@
+.inlineField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.toggle {
+    justify-content: flex-start !important;
+
+}
+
+.dialogDiminsion {
+    width: 30vw;
+    height: 31vh;
+}
+
+.slider {
+    width: 13vw !important;
+    height: 2vh !important;
+    color: #FF6E01 !important;
+    padding: 2% !important;
+}
+
+.MuiSwitch-root {
+    height: 6vh !important;
+    width: 5vw !important;
+}
+
+.MuiSwitch-switchBase {
+    border-radius: 5px !important;
+    height: 6vh !important;
+    width: 5vw !important;
+}
+
+.MuiSwitch-thumb {
+    background-color: #C2A6FF !important;
+    width: 2vw !important;
+    height: 3vh !important;
+    border-radius: 15% !important;
+}
+
+.MuiInput-root {
+    border-radius: 12px;
+    padding: 1%;
+    width: 14vw;
+    background: #180C3C;
+    color: white !important;
+}
+
+.MuiInput-root:before {
+    border-bottom: 0 !important;
+}
+
+.MuiDialog-container {
+    backdrop-filter: blur(9px);
+}
