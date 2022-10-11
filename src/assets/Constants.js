@@ -6,3 +6,9 @@ export const Constants = {
     NEW_CHAT_JOIN: 'newChatJoin',
     NEW_CHAT: 'newChat',
 }
+
+export const Paths = {
+    LEFT: 'left',
+    RIGHT: 'right',
+    CENTER: 'center',
+}

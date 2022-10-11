@@ -48,6 +48,47 @@
     color: white !important;
 }
 
+@media only screen and (max-width: 1224px) {
+    .MuiInput-root {
+        border-radius: 12px;
+        padding: 1%;
+        width: 24vw !important;
+        background: #180C3C;
+        color: white !important;
+    }
+
+    .slider {
+        width: 22vw !important;
+        height: 2vh !important;
+        color: #FF6E01 !important;
+        padding: 2% !important;
+        margin-top: 5%;
+    }
+
+    .MuiSwitch-root {
+        height: 8vh !important;
+        width: 20vw !important;
+    }
+
+    .MuiSwitch-thumb {
+        background-color: #C2A6FF !important;
+        width: 14vw !important;
+        height: 5vh !important;
+        border-radius: 15% !important;
+    }
+
+    .toggle {
+        justify-content: flex-start !important;
+        margin-top: 8% !important;
+    }
+
+    .MuiSwitch-switchBase {
+        border-radius: 5px !important;
+        height: 8vh !important;
+        width: 10vw !important;
+    }
+}
+
 .MuiInput-root:before {
     border-bottom: 0 !important;
 }

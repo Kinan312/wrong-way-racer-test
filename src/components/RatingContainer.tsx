@@ -1,3 +1,6 @@
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import { styled } from "@mui/material/styles";
+import { memo } from "react";
 import {
   Typography,
   Table,
@@ -8,8 +11,6 @@ import {
   Paper,
 } from "@mui/material";
 import "../styles/RatingContainer.css";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import { styled } from "@mui/material/styles";
 
 function RatingContainer(props: any) {
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -36,14 +37,21 @@ function RatingContainer(props: any) {
 
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 360 }} aria-label="customized table">
+      <Table
+        stickyHeader={props.isMobile ? false : true}
+        sx={{ minWidth: 360 }}
+        aria-label="customized table"
+      >
         <TableHead>
           <TableRow>
-            <StyledTableCell>
+            <StyledTableCell
+              className={`${props.isMobile ? "smContainer" : ""}`}
+            >
               <div className="tableHead">
                 <Typography
                   fontSize={40}
                   fontWeight={900}
+                  lineHeight={1}
                   className="textShadow"
                 >
                   5:44
@@ -51,25 +59,38 @@ function RatingContainer(props: any) {
                 <Typography fontSize={15}>Your Last Record</Typography>
               </div>
             </StyledTableCell>
-            <StyledTableCell align="right" width={1}></StyledTableCell>
-            <StyledTableCell align="right">
-              <div className="tableHead circleContainer">
-                <Typography fontSize={14} fontWeight={900}>
+            <StyledTableCell
+              align="right"
+              colSpan={9}
+              className={`${props.isMobile ? "smContainer start" : ""}`}
+            >
+              <div
+                className={`tableHead ${
+                  props.isMobile ? "smCircleContainer" : "circleContainer"
+                }`}
+              >
+                <Typography
+                  fontSize={props.isMobile ? 12 : 18}
+                  fontWeight={900}
+                >
                   # 144
                 </Typography>
                 <Typography fontSize={9}>From 15K</Typography>
               </div>
             </StyledTableCell>
+            {props.isMobile && (
+              <StyledTableCell align="right"></StyledTableCell>
+            )}
           </TableRow>
         </TableHead>
         <TableBody>
           {props.playersList.map((item: any) => (
-            <StyledTableRow key={item.name}>
+            <StyledTableRow>
               <StyledTableCell component="th" className="shadow" scope="row">
                 {item.name}
               </StyledTableCell>
               <StyledTableCell align="right">
-                <div className="tableHead">
+                <div className="tableHead recordCell">
                   <Typography
                     fontSize={14}
                     color={"#8375AD"}
@@ -82,7 +103,7 @@ function RatingContainer(props: any) {
                   </Typography>
                 </div>
               </StyledTableCell>
-              <StyledTableCell align="right">
+              <StyledTableCell align="right" width={"6vw"}>
                 <div className="tableHead">
                   <Typography
                     fontSize={14}
@@ -104,4 +125,4 @@ function RatingContainer(props: any) {
   );
 }
 
-export default RatingContainer;
+export default memo(RatingContainer);

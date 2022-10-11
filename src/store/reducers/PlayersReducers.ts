@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Paths } from "../../assets/Constants";
 
 interface PlayerState {
   newEnemy: any[];
@@ -6,14 +7,16 @@ interface PlayerState {
   status: string;
   newChatJoin: any[];
   newChat: any[];
+  prevPath: string;
 }
 
-const initialState: PlayerState = {
+let initialState: PlayerState = {
   players: [],
   newEnemy: [],
   status: "",
   newChatJoin: [],
   newChat: [],
+  prevPath: Paths.CENTER,
 };
 
 const playersSlice = createSlice({
@@ -21,20 +24,23 @@ const playersSlice = createSlice({
   initialState,
   reducers: {
     getPlayersInfoSuccess(state, action: PayloadAction<string>) {
-      return {
-        ...state,
-        status: action.payload,
-      };
+      state.status = action.payload;
     },
     getPlayersInfoFail(state, action) {
       return {
         ...state,
       };
     },
+    changePathState: (state, action) => {
+      return {
+        ...state,
+        prevPath: action.payload,
+      };
+    },
   },
 });
 
-export const { getPlayersInfoSuccess, getPlayersInfoFail } =
+export const { getPlayersInfoSuccess, getPlayersInfoFail, changePathState } =
   playersSlice.actions;
 
 export default playersSlice.reducer;

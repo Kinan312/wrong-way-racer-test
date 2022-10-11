@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import {
   Button,
   Typography,
@@ -44,7 +43,7 @@ function PlayersList(props: any) {
       <List className="listItem">
         {props.playersList.length > 0
           ? props.playersList.map((item: PlayerModel, index: number) => (
-              <ListItem>
+              <ListItem key={index}>
                 <ListItemAvatar>
                   <Avatar>
                     <img
@@ -60,7 +59,6 @@ function PlayersList(props: any) {
             ))
           : null}
       </List>
-      {/* </Paper> */}
       <SettingsDialog open={open} handleClose={handleClose} />
     </Box>
   );

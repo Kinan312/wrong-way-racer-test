@@ -22,21 +22,22 @@
   max-width: 100%;
   border-radius: 12px;
   background-color: #180B3D;
-  padding: 1%;
-  /* display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; */
-  background: linear-gradient(#180B3D, #180B3D) padding-box, linear-gradient(130deg, #180B3D 0%, #feffff 43%) border-box;
-  border: 3px solid transparent;
+  background: linear-gradient(#180B3D, #180B3D) padding-box, linear-gradient(178deg, #180B3D 0%, #feffff 60%) border-box;
+  border: 4px solid transparent;
   text-align: left;
 }
 
 .sendBtn {
   background-color: rgb(137, 89, 248) !important;
   color: white;
-  font-size: 15px !important;
+  width: 97%;
+  height: 6vh;
+  font-size: 18px !important;
+  text-shadow: -10px 3px 20px #fff;
+  font-weight: 800 !important;
 }
+
+.textBtn {}
 
 .input-container {
   justify-content: center;
@@ -119,6 +120,22 @@
   align-items: flex-start;
 }
 
+.smallPalyerContainer {
+  width: 95% !important;
+  height: 45vh;
+  min-height: 40vh;
+  /* overflow: auto; */
+  max-width: 100%;
+  /* border-radius: 28px;
+  background-color: #180B3D; */
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 4% 1%;
+}
+
 .players {
   background: rgba(16, 12, 74, 0.2) !important;
   box-shadow: inset 3px 4px 63px rgba(255, 255, 255, 0.25) !important;
@@ -150,8 +167,32 @@
   height: 30vh;
 }
 
+@media only screen and (max-width: 1224px) {
+  .startBtnContainer {
+    position: absolute;
+    width: 100%;
+    height: 135% !important;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+  }
+
+  .MuiDialog-paper {
+    background-color: #9377DF !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 37px #573DC6, inset 0px 4px 30px rgba(255, 255, 255, 0.25) !important;
+    border-radius: 24px !important;
+    width: 60vw !important;
+    height: 41vh !important;
+  }
+}
+
 .MuiInput-root {
   border: 0 !important;
+  box-sizing: unset !important;
+
+}
+
+.MuiGrid-item {
+  padding-right: 8px;
 }
 
 .startBtn {
@@ -167,4 +208,32 @@
   width: 100%;
   height: 100%;
   backdrop-filter: blur(7px);
+  z-index: 10;
+}
+
+.tabContainer {
+  margin: 2%;
+  border-radius: 20px;
+}
+
+.MuiTab-root {
+  color: rgba(255, 255, 255, 0.5) !important
+}
+
+.MuiTab-root.Mui-selected {
+  color: #FFFFFF !important;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25), 0px 2px 0px rgba(0, 0, 0, 0.25) !important;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.MuiTabs-flexContainer {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.MuiTabs-indicator {
+  border-radius: 8px !important;
+  height: 0.8vh !important;
+  box-shadow: -10px 3px 20px #fff !important;
 }

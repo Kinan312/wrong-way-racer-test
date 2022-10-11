@@ -1,10 +1,8 @@
 import { Box, ListItemText, List } from "@mui/material";
-
 import "../styles/ChatContainer.css";
 import { PlayerModel } from "../interfaces/playersInterface";
 
 function ChatContainer(props: any) {
-  console.log("itemitemitem", props.chatList);
   return (
     <Box className="innerContainer">
       <List className="listItem">

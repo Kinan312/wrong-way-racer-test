@@ -22,8 +22,41 @@
     background: #131444 !important;
     padding: 18% !important;
     border-radius: 50% !important;
+    text-align: center;
+    width: 3vw;
+    margin-left: 3vw;
+}
+
+.smCircleContainer {
+    background: #131444 !important;
+    padding: 9% !important;
+    border-radius: 50% !important;
+    text-align: center;
+    width: 5vw;
+    margin-left: 0vw;
+}
+
+.smContainer {
+    padding: 7px !important;
+}
+
+.start {
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+.recordCell {
+    background: #261B50;
+    text-align: center;
+}
+
+.MuiTableCell-body {
+    padding: 0 8px !important;
 }
 
 .shadow {
     text-shadow: 2px 2px 10px #ffffff;
+    padding: 0 16px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
 }
